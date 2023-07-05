@@ -1,0 +1,44 @@
+id: reearth-plugin-density-map
+name: Density Map
+version: 0.1.0
+extensions:
+  - id: density-map
+    type: widget
+    name:  Density Map
+    schema:
+      groups:
+        - id: default
+          title: Data
+          fields:
+            - id: url
+              type: url
+              title: Geojson File
+              ui: file
+            - id: tagName
+              type: string
+              title: Tag Name
+        - id: densityList
+          title: 密度
+          list: true
+          fields:
+            - id: minNumber
+              title: Minimum number of points
+              type: number
+              min: 1
+            - id: color
+              title: Color
+              type: string
+              ui: color
+            - id: text
+              title: Text
+              type: string
+        - id: setting
+          title: Setting
+          fields:
+            - id: explanation
+              type: bool
+              title: Explanation
+              defaultValue: false
+
+        
+        
