@@ -146,6 +146,9 @@
 
 ソースコードはこちら(https://github.com/eukarya-inc/reearth-plugin-modelgenerator
 
+本プラグインを使用したサンプルページは以下から閲覧することができます。
+https://heatmap-plugin-sample.reearth.io
+
 - コミュニティ
 
   - このプラグインを利用したプロジェクトをユーザーコミュニティでシェアしましょう。
