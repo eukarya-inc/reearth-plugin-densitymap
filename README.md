@@ -3,24 +3,52 @@
 <img width="1383" alt="WX20220809-171914@2x" src="https://github.com/eukarya-inc/reearth-plugin-geotagging/assets/13118515/bf3ef037-9c7f-4bab-9249-bb845462fdac">
 
 ## このプラグインについて
-- 位置データの密度に従って、各ポイントを指定の色で表示します。
-- 位置データの読み込みはcsv及びgeojsonに対応しています。
+- マップ上のポイントデータの密度に応じて指定した色のヒートマップを表示します。
+- ポイントデータの読み込みはcsvデータセット及びgeojsonに対応しています。
 　
 ## 使用方法
 ### 右パネルの設定項目
 - Dataタブ<br>
-  - Geojson File: ヒートマップを作成するポイントデータのgeojsonファイルを指定します。
-  - Tag Name: この項目に指定したタグが付加されているレイヤーに対してヒートマップを作成します。
+  ヒートマップを作成するポイントデータを指定します。
+    ![](https://github.com/eukarya-inc/reearth-plugin-geotagging/assets/13118515/7661f67b-bc65-46d5-9e20-e0f6b365d332)
 
-  ![](https://github.com/eukarya-inc/reearth-plugin-geotagging/assets/13118515/7661f67b-bc65-46d5-9e20-e0f6b365d332)
+
+  - Geojson Fileからポイントデータを指定する場合
+    ![](https://github.com/eukarya-inc/reearth-plugin-densitymap/assets/13118515/a02150ca-b661-4106-b1f2-187f58858b63)
+    ポイントデータのgeojsonファイルに対してヒートマップを作成する場合は、以下の手順で設定します。ヒートマップが作成されるのはポイントデータのgeojsonに限ります。
+    ①Geojson Fileの項目をクリックします。
+    ②アセットの選択画面でポイントデータのgeojsonファイルを選択します。
+    ③選択ボタンをクリックします。
+    
+
+
+
+  - Re:Earthに追加しているマーカーからヒートマップを作成する場合
+    Tag Nameに任意のタグを指定します。
+    ![](https://github.com/eukarya-inc/reearth-plugin-densitymap/assets/13118515/27d17d46-9048-4ac9-adbb-a77d162f78c6)
+    
+    ①ヒートマップを作成するレイヤをクリックします。
+    ②右パネルのタグをクリックします。
+    ③タグに任意の文字列のタグを設定します。
+    ④ウィジェットからDencity mapをクリックします
+    ⑤tag nameにレイヤーに指定したタグと同じ文字列を入力します。
+
+
+
+
+
 - 密度タブ <br>
   位置データの密度と表示色の対応リストを作成します。リストを追加する時には”+”ボタンを押します。
-  - "Minimum Number of points" ：その色で表示する最小のポイントの数を指定します。
-  - "Color"：表示色を指定します。
-  - "Text"：凡例都して表示する文字を入力します。密度リストには密度が低い方から高い方に順に指定してください。<br>
+  - ①＋ボタンをクリックし、リストを追加します。
+  - ②"Minimum Number of points" ：ポイント数の区切りを指定します。その色で表示する最小のポイントの数を入力してください。
+  - ③"Color"：表示色を指定します。
+  - ④"Text"：凡例として表示する文字を入力します。<br>
 
-  ![](https://github.com/eukarya-inc/reearth-plugin-geotagging/assets/13118515/f59fec97-9918-48f3-9c11-9301101cd616)
+  ![](https://github.com/eukarya-inc/reearth-plugin-densitymap/assets/13118515/385af774-6851-4017-a2a2-62f61670f5a7)
 
+上の図の場合、ポイント数が「Minimum Number of points」で指定した5から、次の区切りの数値の手前（9）までの時に、水色(#83c5e8ff)で表示されます。
+
+密度リストには密度が低い方から高い方に順に指定してください。
   <密度リスト指定例> <br>
   | 密度リストNo | Minimum Number of points | 表示範囲 |
   | :----------: | :----------------------: | :------: |
@@ -32,7 +60,7 @@
 
 
 - Settingタブ <br>
-  Explanation スイッチをOnにすると密度リストで指定した色とテキストを凡例画面に表示します。<br>
+  Explanation スイッチをOnにすると密度リストで指定した色とテキストを凡例画面に表示することができます。<br>
     ![](https://github.com/eukarya-inc/reearth-plugin-geotagging/assets/13118515/bf1ec882-1331-44a1-9ddb-65ef1c6f1d43)
   
   <凡例の表示例>
