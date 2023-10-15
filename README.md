@@ -10,6 +10,7 @@
 ### 右パネルの設定項目
 - Dataタブ<br>
   ヒートマップを作成するポイントデータを指定します。
+
     ![](https://github.com/eukarya-inc/reearth-plugin-geotagging/assets/13118515/7661f67b-bc65-46d5-9e20-e0f6b365d332)
 
 
